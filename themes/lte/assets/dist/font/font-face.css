@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Y2K_Neophyte';
+    src: url('Y2KNeophyte.woff2') format('woff2'),
+        url('Y2KNeophyte.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Y2K_Neophyte';
+    src: url('Y2KNeophyte-Italic.woff2') format('woff2'),
+        url('Y2KNeophyte-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+h3 {
+	font-family:'Y2K_Neophyte';
+	color: green;
+}

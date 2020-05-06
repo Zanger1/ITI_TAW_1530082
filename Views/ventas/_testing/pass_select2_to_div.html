@@ -1,0 +1,58 @@
+    <div class="panel-body">
+      <table width="825" border="0" class="table table-striped">
+        <tbody>
+          <tr>
+            <td>
+              <select class="selectapps selectapps2" id="ApplicationsList" name="ApplicationsList" multiple="multiple" style="width:99%;">
+                <option value="CNKronos" >CNKronos</option>
+                <option value="Network2">Drive</option>
+                <option value="Network">Email</option>
+                <option value="OnBase">OnBase</option>
+               </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="CNKronos" class="panel panel-primary selectapps2" style="width:850px; margin:0 auto; margin-top:10px;">
+      <h3 class="panel-title"><strong>CNKronos</strong></h3>
+  </div>
+
+  <div id="Network2" class="panel panel-primary selectapps2" style="width:850px; margin:0 auto; margin-top:10px;">
+      <h3 class="panel-title"><strong>Drive</strong></h3>
+  </div>
+
+  <div id="Network" class="panel panel-primary selectapps2" style="width:850px; margin:0 auto; margin-top:10px;">
+      <h3 class="panel-title"><strong>Email</strong></h3>
+  </div>
+
+  <div id="OnBase" class="panel panel-primary selectapps2" style="width:850px; margin:0 auto; margin-top:10px; ">
+      <h3 class="panel-title"><strong>OnBase</strong></h3>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  // Create the select2
+  $('.selectapps').select2();
+  // hide the sub-panes
+  $('.selectapps2').hide();
+  
+  // When our select2 changes...
+  $('#ApplicationsList').change(function(){
+    // ... we can get all the selected options
+    let selected = $(this).select2('data');
+    
+    // Hide all the panes again
+    $('.selectapps2').hide();
+    // Go through the list of options
+    selected.forEach( function(option){
+      // and show the one with this id
+      $("#"+option.id).show()
+    })
+  });
+}); </script>

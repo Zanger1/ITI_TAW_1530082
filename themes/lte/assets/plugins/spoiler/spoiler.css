@@ -1,0 +1,30 @@
+.spoiler {
+  border-radius: 7px;
+  background-color: #ccc;
+  padding: 1%;
+  display: table;
+}
+
+.spoiler-header, .spoiler-toggle {
+  /* float: left; */
+  display: inline-block;
+}
+
+.spoiler-toggle {
+  margin-left: 2rem;
+}
+
+.spoiler > .spoiler-content {
+  display: none;
+}
+
+.spoiler.open > .spoiler-content {
+  display: block;
+  background-color: #fff;
+  margin-top: 2.5rem;
+  padding: 3%;
+}
+
+.spoiler-full-width {
+	width: 100%;
+}

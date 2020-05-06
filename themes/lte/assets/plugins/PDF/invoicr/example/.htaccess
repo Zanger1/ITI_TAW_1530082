@@ -1,0 +1,3 @@
+#test
+#RewriteEngine On
+#RewriteRule (.*)/(.*).pdf$ index.php?for=$1&uk=$2
